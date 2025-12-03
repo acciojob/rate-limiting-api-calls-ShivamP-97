@@ -61,14 +61,12 @@ function enforceTenSecondRule(fetchAction) {
 
     burstCount++;
 
-    if (burstCount <= 5) {
-        return fetchAction();
-    } else {
-        return new Promise((resolve) => {
-            const delay = 10000 - (now - burstWindowStart);
-            setTimeout(() => resolve(fetchAction()), delay);
-        });
-    }
+	if (burstCount <= 5) {
+		return fetchAction();
+	} else {
+		alert("Too many API calls. Please wait and try again.");
+		return Promise.resolve();
+	}
 }
 
 function fetchTodo() {
