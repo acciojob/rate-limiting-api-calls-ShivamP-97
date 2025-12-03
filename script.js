@@ -88,7 +88,7 @@ function displayResult(data) {
     resultsDiv.appendChild(div);
 }
 
-document.getElementById("fetchBtn").addEventListener("click", () => {
+document.getElementById("fetch-button").addEventListener("click", () => {
     incrementClickCounter();
 
     enforceTenSecondRule(() => fetchTodo().then(displayResult));
