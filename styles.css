@@ -1,1 +1,14 @@
 /*  your css code here. If applicable */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+.item {
+    padding: 6px;
+    border-bottom: 1px solid #ddd;
+}
